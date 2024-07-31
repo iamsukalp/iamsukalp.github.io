@@ -1,15 +1,14 @@
+import divami from './divami.png'
+import drreddy from './drreddy.svg'
+import exl from './exl.png'
 import hero from './hero.jpg'
-import meta from './meta.png'
-import shopify from './shopify.png'
-import starbucks from './starbucks.png'
-import tesla from './tesla.png'
+import icici from './icici.svg'
 import logo from './logo.svg'
+import tcs from './tcs.png'
+
+
 
 export {
-    hero,
-    meta,
-    shopify,
-    starbucks,
-    tesla,
-    logo
+    divami, drreddy, exl, hero, icici, logo, tcs
 }
+
