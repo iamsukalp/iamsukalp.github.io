@@ -1,10 +1,14 @@
+import admission from './admission.svg'
 import adobexd from './adobexd.svg'
+import analytics from './analytics.svg'
 import android from './android.svg'
 import arrow from './arrow.svg'
 import aws from './aws.svg'
 import car from './car.svg'
 import contact from './contact.svg'
+import conversation from './conversation.svg'
 import css from './css.svg'
+import delivery from './delivery.svg'
 import estate from './estate.svg'
 import express from './express.svg'
 import firebase from './firebase.svg'
@@ -22,14 +26,17 @@ import mysql from './mysql.svg'
 import nextjs from './nextjs.svg'
 import nodejs from './nodejs.svg'
 import openai from './openai.svg'
+import planner from './planner.svg'
 import powerbi from './powerbi.svg'
 import pricewise from './pricewise.svg'
 import python from './python.svg'
 import r from './r.svg'
 import react from './react.svg'
+import recruitment from './recruitment.svg'
 import redux from './redux.svg'
 import sass from './sass.svg'
 import snapgram from './snapgram.svg'
+import social from './social.svg'
 import soundoff from './soundoff.png'
 import soundon from './soundon.png'
 import streamlit from './streamlit.svg'
@@ -40,14 +47,7 @@ import twitter from './twitter.svg'
 import typescript from './typescript.svg'
 
 export {
-    adobexd, android, arrow, aws, car, contact, css, estate, express, firebase, git,
-    github,
-    html, java, javascript, linkedin, llama, mongodb,
-    motion,
-    mui, mysql, nextjs,
-    nodejs, openai, powerbi, pricewise, python,
-    r, react,
-    redux,
-    sass, snapgram, soundoff, soundon, streamlit, summiz, tailwindcss, threads, twitter, typescript
+    admission, adobexd, analytics, android, arrow, aws, car, contact, conversation, css, delivery, estate, express, firebase, git,
+    github, html, java, javascript, linkedin, llama, mongodb, motion, mui, mysql, nextjs, nodejs, openai, planner, powerbi, pricewise, python, r, react, recruitment, redux, sass, snapgram, social, soundoff, soundon, streamlit, summiz, tailwindcss, threads, twitter, typescript
 }
 

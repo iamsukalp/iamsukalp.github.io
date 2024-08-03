@@ -5,10 +5,10 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   base: './',
-  server: {
-    mimeTypes: {
-      'application/javascript': ['js'],
-    },
-  },
+//   server: {
+//     mimeTypes: {
+//       'application/javascript': ['js'],
+//     },
+//   },
   assetsInclude: ['**/*.glb']
 })

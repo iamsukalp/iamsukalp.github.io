@@ -142,6 +142,15 @@ body:has(.card[data-color="green"]:hover) {
   background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
 }
 
+.block-container .btn-back-cyan{
+  background: linear-gradient(135deg, #3d0a47 -20%, #00ffff 120%);
+}
+
+.block-container .btn-back-seagreen{
+  background: linear-gradient(135deg, #025235 -20%, #0d31f8 120%);
+}
+
+
 .block-container .btn-front {
   position: absolute;
   inset: 0;

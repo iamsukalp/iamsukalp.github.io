@@ -1,11 +1,13 @@
 import {
+    admission,
     adobexd,
+    analytics,
     android,
     aws,
-    car,
     contact,
+    conversation,
     css,
-    estate,
+    delivery,
     firebase,
     github,
     html,
@@ -16,15 +18,15 @@ import {
     mysql,
     nodejs,
     openai,
+    planner,
     powerbi,
-    pricewise,
     python,
     r,
     react,
-    snapgram,
+    recruitment,
+    social,
     streamlit,
-    summiz,
-    threads
+    summiz
 } from "../assets/icons";
 import { divami, drreddy, exl, icici, tcs } from "../assets/images";
 
@@ -123,42 +125,16 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "System Engineer",
-    company_name: "Tata Consultancy Services",
-        icon: tcs,
-        iconBg: "#000000",
-        date: "October 2016 - April 2020",
+        title: "Assistant Manager (Decision Management)",
+        company_name: "EXL Service",
+        icon: exl,
+        iconBg: "#ffffff",
+        date: "May 2023 - Present",
         points: [
-            "Served as Acting Team Lead for Online Content Management Systems (Documentum & OpenText)",
-            "Administered and maintained Windows applications, ensuring optimal performance, security, and reliability",
-            "Managed Microsoft Exchange environments, overseeing email system configuration, user management, and troubleshooting to ensure seamless communication",
-            "Automated, created and streamlined various internal applications using PowerShell scripting"
-        ],
-    },
-    {
-        title: "Freelance Mobile Application Developer",
-        company_name: "Dr. Reddy's Foundation",
-        icon: drreddy,
-        iconBg: "#512f90",
-        date: "July 2020 - January 2021",
-        points: [
-            "Independently developed the Chhota Book Android application, providing a solution tailored to client needs, and designed and implemented the back-end architecture to ensure robust performance, scalability, and security",
-            "Created an intuitive and visually appealing user interface to enhance user experience and engagement",
-            "Conducted user research and implemented feedback to optimize the application's usability and functionality",
-            "Collaborated with cross-functional teams, including designers, product managers, and other developers, to create high-quality products.",
-        ],
-    },
-    {
-        title: "Digital Transformation Intern",
-        company_name: "ICICI Foundation",
-        icon: icici,
-        iconBg: "#b7e4c7",
-        date: "September 2021 - December 2021",
-        points: [
-            "Served as a Digital Transformation Consultant Intern",
-            "Digitized the recruitment process for ICICI Foundation",
-            "Developed process flows to analyze and compare the current and future state processes",
-            "Created a proof-of-concept (POC) website to demonstrate the future state process to the leadership team"
+            "Digital Transformation Consultant: Lead digital transformation initiatives, driving organizational change and process improvement",
+            "Generative AI Solutions: Develop and implement tailored generative AI solutions to enhance client innovation and productivity",
+            "Client-Centric Problem Solving: Collaborate closely with clients to deliver customized, scalable solutions addressing specific business challenges",
+            "Expertise in OpenAI and Meta LLMs: Leverage advanced technologies like OpenAI and Meta LLMs to create intelligent, value-driven AI applications",
         ],
     },
     {
@@ -175,19 +151,46 @@ export const experiences = [
         ],
     },
     {
-        title: "Assistant Manager (Decision Management)",
-        company_name: "EXL Service",
-        icon: exl,
-        iconBg: "#ffffff",
-        date: "May 2023 - Present",
+        title: "Digital Transformation Intern",
+        company_name: "ICICI Foundation",
+        icon: icici,
+        iconBg: "#b7e4c7",
+        date: "September 2021 - December 2021",
         points: [
-            "Digital Transformation Consultant: Lead digital transformation initiatives, driving organizational change and process improvement",
-            "Generative AI Solutions: Develop and implement tailored generative AI solutions to enhance client innovation and productivity",
-            "Client-Centric Problem Solving: Collaborate closely with clients to deliver customized, scalable solutions addressing specific business challenges",
-            "Expertise in OpenAI and Meta LLMs: Leverage advanced technologies like OpenAI and Meta LLMs to create intelligent, value-driven AI applications",
+            "Served as a Digital Transformation Consultant Intern",
+            "Digitized the recruitment process for ICICI Foundation",
+            "Developed process flows to analyze and compare the current and future state processes",
+            "Created a proof-of-concept (POC) website to demonstrate the future state process to the leadership team"
+        ],
+    },
+    {
+        title: "Freelance Mobile Application Developer",
+        company_name: "Dr. Reddy's Foundation",
+        icon: drreddy,
+        iconBg: "#512f90",
+        date: "July 2020 - January 2021",
+        points: [
+            "Independently developed the Chhota Book Android application, providing a solution tailored to client needs, and designed and implemented the back-end architecture to ensure robust performance, scalability, and security",
+            "Created an intuitive and visually appealing user interface to enhance user experience and engagement",
+            "Conducted user research and implemented feedback to optimize the application's usability and functionality",
+            "Collaborated with cross-functional teams, including designers, product managers, and other developers, to create high-quality products.",
+        ],
+    },
+    {
+        title: "System Engineer",
+        company_name: "Tata Consultancy Services",
+        icon: tcs,
+        iconBg: "#000000",
+        date: "October 2016 - April 2020",
+        points: [
+            "Served as Acting Team Lead for Online Content Management Systems (Documentum & OpenText)",
+            "Administered and maintained Windows applications, ensuring optimal performance, security, and reliability",
+            "Managed Microsoft Exchange environments, overseeing email system configuration, user management, and troubleshooting to ensure seamless communication",
+            "Automated, created and streamlined various internal applications using PowerShell scripting"
         ],
     },
 ];
+
 
 export const socialLinks = [
     {
@@ -209,45 +212,70 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: conversation,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
-    },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        name: 'Conversational BI',
+        description: 'Developed a Text2SQL application using ChatGPT-3.5, demonstrating how a large language model can be integrated with a database. This application allows business users to generate insights directly from datasets through natural language queries.',
+        link: 'https://conversationalbi.streamlit.app/',
+        type: 'live'
     },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'Report Translator',
+        description: 'Developed a translator application for the medical value tourism industry. This project addresses real-life challenges by enabling the translation of patient reports into English, making them accessible and useful for cross-country diagnosis.',
+        link: 'https://b1c-report-translator.streamlit.app/',
+        type: 'live'
+    },
+    {
+        iconUrl: planner,
+        theme: 'btn-back-cyan',
+        name: 'Trip planner',
+        description: "Implemented Crew-AI with GPT-3.5 to showcase the chain-of-thought model. This application plans trips based on current news, weather, and users' hobbies and interests.",
+        link: 'https://tripplanner-crewai.streamlit.app/',
+        type: 'live'
+    },
+    {
+        iconUrl: analytics,
+        theme: 'btn-back-green',
+        name: 'Deck',
+        description: "Developed an interactive analytical dashboard for business users to make data-driven decisions. The dashboard provides real-time insights, visualizes key performance indicators, and enables efficient data exploration and analysis.",
+        link: 'https://github.com/iamsukalp/supermarket_analysis',
+        type: 'repository'
+    },
+    
+    {
+        iconUrl: delivery,
+        theme: 'btn-back-blue',
+        name: 'Byer',
+        description: "Developed a package for the client application (Android) ecosystem of the hyper-local delivery platform 'Byer'. This package includes all necessary components to support seamless delivery operations and enhance user experience.",
+        link: 'https://github.com/iamsukalp/Byer',
+        type: 'repository'
+    },
+    {
+        iconUrl: recruitment,
+        theme: 'btn-back-pink',
+        name: 'iRecruit',
+        description: "Designed an Angular application as a proof of concept to digitize the recruitment process for ICICI Foundation, streamlining operations and improving efficiency.",
+        link: 'https://github.com/iamsukalp/iRecruit',
+        type: 'repository'
+    },
+    {
+        iconUrl: social,
+        theme: 'btn-back-black',
+        name: 'Solutions',
+        description: "Solution is an android application created to solve the communication gap for the new entrants coming to NMIMS, to facilitate dialog between students, build communities, share notes and collaborate.",
+        link: 'https://github.com/iamsukalp/Solution',
+        type: 'repository'
+    },
+    
+    {
+        iconUrl: admission,
+        theme: 'btn-back-seagreen',
+        name: 'Disha',
+        description: "Disha is a platform to streamline and improve the admission process of NMIMS (Narsee Monjee Institute of Management Studies). This repo contains both the admin console made in react js and the android client application.",
+        link: 'https://github.com/iamsukalp/Disha',
+        type: 'repository'
     }
+   
 ];

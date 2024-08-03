@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-
+import { arrow } from "../assets/icons";
 import { CTA } from "../components";
 import { projects } from "../constants";
-import { arrow } from "../assets/icons";
 
 const Projects = () => {
   return (
@@ -30,7 +29,7 @@ const Projects = () => {
               <div className='btn-front rounded-xl flex justify-center items-center'>
                 <img
                   src={project.iconUrl}
-                  alt='threads'
+                  alt='project icon'
                   className='w-1/2 h-1/2 object-contain'
                 />
               </div>
@@ -48,7 +47,7 @@ const Projects = () => {
                   rel='noopener noreferrer'
                   className='font-semibold text-blue-600'
                 >
-                  Live Link
+                  {project.type === 'live' ? 'Live Link' : 'Repository'}
                 </Link>
                 <img
                   src={arrow}
