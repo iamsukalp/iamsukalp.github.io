@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import { arrow } from "../assets/icons";
 import { CTA } from "../components";
 import { projects } from "../constants";
@@ -29,7 +30,7 @@ const Projects = () => {
               <div className='btn-front rounded-xl flex justify-center items-center'>
                 <img
                   src={project.iconUrl}
-                  alt='project icon'
+                  alt='threads'
                   className='w-1/2 h-1/2 object-contain'
                 />
               </div>
