@@ -10,7 +10,11 @@ const HomeInfo = ({ currentStage }) => {
         <span className='font-semibold mx-2 text-white'>Sukalp</span>
         👋
         <br />
-        A Data Analyst and a Software Engineer from India
+        <p>
+        Data Analyst, tech enthusiast, digital transformation evangelist
+        <br />
+        and innovative Software Engineer from India.
+        </p>
       </h1>
     );
 

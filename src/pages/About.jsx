@@ -22,12 +22,11 @@ const About = () => {
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          Software Engineer based in India, specializing in Data Analysis,
-          Mobile Application and Generative AI.
+        A Generative AI consultant, with an MBA in Digital Transformation. I have a passion for innovation, data analytics and machine learning
         </p>
       </div>
 
-      <div className='py-10 flex flex-col'>
+      <div className='py-10 flx flex-col'>
         <h3 className='subhead-text'>My Skills</h3>
 
         <div className='mt-16 flex flex-wrap gap-12'>
