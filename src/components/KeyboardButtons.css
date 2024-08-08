@@ -1,0 +1,66 @@
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    position: absolute;
+    bottom: 20px; /* Adjust this value as needed */
+    right: 20px; /* Adjust this value as needed */
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.433);
+    background-color: rgba(0, 0, 0, 0.525);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px #999;
+    transition: all 0.2s ease;
+}
+
+.button:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.button-up {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.button-left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.button-down {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.button-right {
+    grid-column: 3;
+    grid-row: 2;
+    animation: press 1s infinite;
+}
+
+@keyframes press {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 4px #999;
+    }
+    50% {
+        transform: translateY(4px);
+        box-shadow: 0 2px #666;
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 4px #999;
+    }
+}

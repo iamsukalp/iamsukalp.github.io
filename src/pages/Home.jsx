@@ -1,9 +1,9 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 
-import sakura from "../assets/sakura.mp3";
-import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
+import sakura from "../assets/sakura.mp3";
+import { HomeInfo, KeyboardAnims, Loader } from "../components";
 import { Bird, Island, Plane, Sky } from "../models";
 
 const Home = () => {
@@ -112,6 +112,8 @@ const Home = () => {
           className='w-10 h-10 cursor-pointer object-contain'
         />
       </div>
+
+      <KeyboardAnims />
     </section>
   );
 };

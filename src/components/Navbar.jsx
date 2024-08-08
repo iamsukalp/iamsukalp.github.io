@@ -1,5 +1,21 @@
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
+const DownloadLink = () => {
+  const handleDownload = (e) => {
+    e.preventDefault();
+    const link = document.createElement('a');
+    link.href = 'src\assets\resume\SUKALP TRIPATHI LATERAL.pdf'; // Replace with the actual path to your PDF file
+    link.download = 'SukalpTripathi_resume.pdf'; // Replace with the desired file name
+    link.click();
+  };
+
+  return (
+    <NavLink to="#" onClick={handleDownload} className={({ isActive }) => isActive ? "text-black" : "text-blue-600" }>
+      Download Resume
+    </NavLink>
+  );
+};
 
 const Navbar = () => {
   return (
@@ -14,6 +30,7 @@ const Navbar = () => {
         <NavLink to='/projects' className={({ isActive }) => isActive ? "text-blue-600" : "text-black"}>
           Projects
         </NavLink>
+        <DownloadLink />
       </nav>
     </header>
   );
