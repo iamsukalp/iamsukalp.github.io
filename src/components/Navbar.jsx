@@ -5,7 +5,7 @@ const DownloadLink = () => {
   const handleDownload = (e) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = 'src\assets\resume\SUKALP TRIPATHI LATERAL.pdf'; // Replace with the actual path to your PDF file
+    link.href = 'public/resume/SUKALP TRIPATHI LATERAL.pdf'; // Replace with the actual path to your PDF file
     link.download = 'SukalpTripathi_resume.pdf'; // Replace with the desired file name
     link.click();
   };
