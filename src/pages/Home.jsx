@@ -54,6 +54,20 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
+  // const adjustIslandForScreenSize = () => {
+  //   let screenScale, screenPosition;
+
+  //   if (window.innerWidth < 768) {
+  //     screenScale = [0.5, 0.5, 0.5];
+  //     screenPosition = [0, -6.5, -43.4];
+  //   } else {
+  //     screenScale = [1, 1, 1];
+  //     screenPosition = [0, -6.5, -43.4];
+  //   }
+
+  //   return [screenScale, screenPosition];
+  // };
+
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
 
@@ -69,6 +83,7 @@ const Home = () => {
         }`}
         camera={{ near: 0.1, far: 1000 }}
       >
+
         <Suspense fallback={<Loader />}>
           <directionalLight position={[1, 1, 1]} intensity={2} />
           <ambientLight intensity={0.5} />

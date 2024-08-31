@@ -5,7 +5,7 @@ const DownloadLink = () => {
   const handleDownload = (e) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = '/sukalp_resume_exl.pdf'; // Replace with the actual path to your PDF file
+    link.href = '/sukalp_resume_resume.pdf'; // Replace with the actual path to your PDF file
     link.download = 'SukalpTripathi_resume.pdf'; // Replace with the desired file name
     link.click();
   };
