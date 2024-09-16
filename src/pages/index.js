@@ -1,11 +1,9 @@
-import Home from "./Home";
-import About from './About'
-import Projects from "./Projects";
+import About from './About';
+import Blog from "./Blog";
 import Contact from "./Contact";
+import Home from "./Home";
+import Projects from "./Projects";
 
 export {
-    Home,
-    About,
-    Projects,
-    Contact
-}
+    About, Blog, Contact, Home, Projects
+};

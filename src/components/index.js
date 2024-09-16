@@ -5,10 +5,12 @@ import HomeInfo from "./HomeInfo";
 import KeyboardAnims from "./KeyboardAnim";
 import Loader from "./Loader";
 import Navbar from "./Navbar";
+import { CardDefault } from "./old_Card";
 
 export {
-    Alert, CTA, Footer,
+    Alert, CardDefault, CTA, Footer,
     HomeInfo,
     KeyboardAnims, Loader,
     Navbar
 };
+
