@@ -196,14 +196,3 @@ body:has(.card[data-color="green"]:hover) {
   grid-auto-rows: 1fr;
 }
 
-
-.card-styles {
-  box-shadow: 0px;
-  transition: height 0.3s ease-in-out;
-}
-
-.truncated-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}

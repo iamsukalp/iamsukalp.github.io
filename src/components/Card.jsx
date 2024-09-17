@@ -1,14 +1,7 @@
-import {
-    Card,
-    CardBody,
-    CardHeader,
-    Typography
-} from "@material-tailwind/react";
 import React, { useEffect, useRef, useState } from 'react';
 
 import '../../src/index.css';
 import './card.css';
-import { batch_api } from '../assets/images';
 
 // Function to format date with ordinal suffix
 const formatDate = (dateString) => {
@@ -45,65 +38,25 @@ export function CardDefault({ image, title, description, link, date }) {
         setIsExpanded(!isExpanded);
     };
 
-    return (
-        // <Card className="mt-6 w-80 overflow-hidden flex flex-col h-[400px]">
-        //     <CardHeader shadow={false} floated={false} className="h-56">
-        //         <img src={image} alt={title} className="w-full h-full object-cover" />
-        //     </CardHeader>
-        //     <CardBody className="p-4 flex flex-col flex-grow">
-        //         <div className="flex-grow flex flex-col">
-        //             <Typography variant="small" color="gray" className="mb-2">
-        //                 {formatDate(date)}
-        //             </Typography>
-        //             <Typography variant="h5" color="blue-gray" className="mb-2">
-        //                 {title}
-        //             </Typography>
-        //             <div 
-        //                 ref={containerRef} 
-        //                 className={`flex-grow overflow-hidden ${isExpanded ? 'max-h-full' : 'max-h-24'}`}
-        //             >
-        //                 <Typography color="gray" ref={contentRef}>
-        //                     {description}
-        //                 </Typography>
-        //             </div>
-        //         </div>
-        //         {(isTruncated || isExpanded) && (
-        //             <button 
-        //                 onClick={toggleDescription} 
-        //                 className="mt-2 text-blue-500 hover:text-blue-700 transition-colors self-start"
-        //             >
-        //                 {isExpanded ? 'Show less' : 'Read more'}
-        //             </button>
-        //         )}
-        //     </CardBody>
-        // </Card>
+    const handleCardClick = () => {
+        if (link) {
+            window.open(link, '_blank'); // Open the link in a new tab
+        }
+    };
 
-        <div className="post">
+    return (
+
+
+        <div className="post" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
             <div className="header_post">
-                <img src={`${batch_api}`} alt={title} />
-                {/* {resizedImageSrc ? (
-                    <img 
-                        src={resizedImageSrc} 
-                        alt={title} 
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            objectPosition: 'center'
-                        }}
-                    />
-                ) : (
-                    <div className="image-placeholder">Loading...</div>
-                )} */}
+                <img src={image} alt={title} />
+
             </div>
 
             <div className="body_post">
                 <div className="post_content">
 
                     <h1>{title}</h1>
-                    {/* <p className="desc">{description}</p> */}
-
-                    {/* <p>{category}</p> */}
 
                     <div className="container_infos">
                         <div className="postedBy">
@@ -111,20 +64,11 @@ export function CardDefault({ image, title, description, link, date }) {
                             {formatDate(date)}
                         </div>
 
-                        {/* <div className="container_tags">
-                            <span>tags</span>
-                            <div className="tags">
-                                <ul>
-                                    <li>design</li>
-                                    <li>front end</li>
-                                </ul>
-                            </div>
 
-                        </div> */}
                     </div>
                 </div>
             </div>
         </div>
     );
 }
-/// this is my card component consider this, just acknowledge .. i will ask the question in next message
+
