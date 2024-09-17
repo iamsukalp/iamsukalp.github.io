@@ -73,7 +73,7 @@ const Blog = () => {
         </div>
 
         {/* <div className='mt-4 grid grid-cols-1 md:grid-cols-3 gap-40'> */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-40">
+        <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-2 mt-10 justify-items-center">
           {/* Loop through the articles array */}
           {articles.length > 0 ? (
             articles.map((article) => (

@@ -1,52 +1,130 @@
-import React from 'react';
-import './card.css';
+import {
+    Card,
+    CardBody,
+    CardHeader,
+    Typography
+} from "@material-tailwind/react";
+import React, { useEffect, useRef, useState } from 'react';
 
+import '../../src/index.css';
+import './card.css';
+import { batch_api } from '../assets/images';
 
 // Function to format date with ordinal suffix
 const formatDate = (dateString) => {
     const date = new Date(dateString);
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     const formattedDate = date.toLocaleDateString('en-GB', options);
-  
+
     // Add ordinal suffix
     const day = date.getDate();
     const suffix = ['th', 'st', 'nd', 'rd'][(day % 10 <= 3 && Math.floor(day % 100 / 10) !== 1) ? day % 10 : 0];
     const dayWithSuffix = day + suffix;
-  
-    return `Published on ${dayWithSuffix} ${formattedDate.split(' ')[1]} ${formattedDate.split(' ')[2]}`;
-  };
 
-  export function CardDefault({ image, title, description, link, date }) {
+    return `${dayWithSuffix} ${formattedDate.split(' ')[1]} ${formattedDate.split(' ')[2]}`;
+};
+export function CardDefault({ image, title, description, link, date }) {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [isTruncated, setIsTruncated] = useState(false);
+    const contentRef = useRef(null);
+    const containerRef = useRef(null);
 
+    useEffect(() => {
+        const checkTruncation = () => {
+            if (contentRef.current && containerRef.current) {
+                setIsTruncated(contentRef.current.scrollHeight > containerRef.current.clientHeight);
+            }
+        };
+
+        checkTruncation();
+        window.addEventListener('resize', checkTruncation);
+        return () => window.removeEventListener('resize', checkTruncation);
+    }, [description]);
+
+    const toggleDescription = () => {
+        setIsExpanded(!isExpanded);
+    };
 
     return (
-        <div className="post b-1" >
-          <div className="header_post">
-            <img src = {image} alt="Post header" />
-          </div>
-          <div className="body_post">
-            <div className="post_content">
-              <h1>{title}</h1>
-              <p>{description}</p>
-              {/* <div className="container_infos">
-                <div className="postedBy">
-                  <span>author</span>
-                  {author}
-                </div>
-                <div className="container_tags">
-                  <span>tags</span>
-                  <div className="tags">
-                    <ul>
-                      {tags.map((tag, index) => (
-                        <li key={index}>{tag}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div> */}
-            </div>
-          </div>
-        </div>
-      );
+        // <Card className="mt-6 w-80 overflow-hidden flex flex-col h-[400px]">
+        //     <CardHeader shadow={false} floated={false} className="h-56">
+        //         <img src={image} alt={title} className="w-full h-full object-cover" />
+        //     </CardHeader>
+        //     <CardBody className="p-4 flex flex-col flex-grow">
+        //         <div className="flex-grow flex flex-col">
+        //             <Typography variant="small" color="gray" className="mb-2">
+        //                 {formatDate(date)}
+        //             </Typography>
+        //             <Typography variant="h5" color="blue-gray" className="mb-2">
+        //                 {title}
+        //             </Typography>
+        //             <div 
+        //                 ref={containerRef} 
+        //                 className={`flex-grow overflow-hidden ${isExpanded ? 'max-h-full' : 'max-h-24'}`}
+        //             >
+        //                 <Typography color="gray" ref={contentRef}>
+        //                     {description}
+        //                 </Typography>
+        //             </div>
+        //         </div>
+        //         {(isTruncated || isExpanded) && (
+        //             <button 
+        //                 onClick={toggleDescription} 
+        //                 className="mt-2 text-blue-500 hover:text-blue-700 transition-colors self-start"
+        //             >
+        //                 {isExpanded ? 'Show less' : 'Read more'}
+        //             </button>
+        //         )}
+        //     </CardBody>
+        // </Card>
 
-  }
+        <div className="post">
+            <div className="header_post">
+                <img src={`${batch_api}`} alt={title} />
+                {/* {resizedImageSrc ? (
+                    <img 
+                        src={resizedImageSrc} 
+                        alt={title} 
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center'
+                        }}
+                    />
+                ) : (
+                    <div className="image-placeholder">Loading...</div>
+                )} */}
+            </div>
+
+            <div className="body_post">
+                <div className="post_content">
+
+                    <h1>{title}</h1>
+                    {/* <p className="desc">{description}</p> */}
+
+                    {/* <p>{category}</p> */}
+
+                    <div className="container_infos">
+                        <div className="postedBy">
+                            <span>Published on</span>
+                            {formatDate(date)}
+                        </div>
+
+                        {/* <div className="container_tags">
+                            <span>tags</span>
+                            <div className="tags">
+                                <ul>
+                                    <li>design</li>
+                                    <li>front end</li>
+                                </ul>
+                            </div>
+
+                        </div> */}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+/// this is my card component consider this, just acknowledge .. i will ask the question in next message
