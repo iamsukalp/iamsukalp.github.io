@@ -11,7 +11,7 @@ const DownloadLink = () => {
   };
 
   return (
-    <NavLink to="#" onClick={handleDownload} className={({ isActive }) => isActive ? "text-black" : "text-blue-600" }>
+    <NavLink to="#" onClick={handleDownload} className={({ isActive }) => isActive ? "text-black" : "text-blue-600"}>
       Download Resume
     </NavLink>
   );
@@ -24,16 +24,16 @@ const Navbar = () => {
         <p className="blue-gradient_text">ST</p>
       </NavLink>
       <nav className='flex text-lg gap-7 font-medium'>
-        <NavLink to='/about' className={({ isActive }) => isActive ? "text-blue-600" : "text-black" }>
+        <NavLink to='/about' className={({ isActive }) => isActive ? "text-blue-600" : "text-black"}>
           About
         </NavLink>
         <NavLink to='/projects' className={({ isActive }) => isActive ? "text-blue-600" : "text-black"}>
           Projects
         </NavLink>
         <NavLink to='/blog' className={({ isActive }) => isActive ? "text-blue-600" : "text-black"}>
-          Blog
+          Blogs
         </NavLink>
-        
+
         <DownloadLink />
       </nav>
     </header>

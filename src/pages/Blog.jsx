@@ -30,7 +30,7 @@ const Blog = () => {
       const data = await response.json();
       console.log(data)
       if (data.items) {
-       
+
         setArticles(data.items); // Assuming the articles are in `items`
       }
     } catch (error) {
