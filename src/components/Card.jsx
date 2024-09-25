@@ -50,21 +50,15 @@ export function CardDefault({ image, title, description, link, date }) {
         <div className="post" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
             <div className="header_post">
                 <img src={image} alt={title} />
-
             </div>
-
             <div className="body_post">
                 <div className="post_content">
-
                     <h1>{title}</h1>
-
                     <div className="container_infos">
                         <div className="postedBy">
                             <span>Published on</span>
                             {formatDate(date)}
                         </div>
-
-
                     </div>
                 </div>
             </div>
