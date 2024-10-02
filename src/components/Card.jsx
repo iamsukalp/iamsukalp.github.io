@@ -47,7 +47,7 @@ export function CardDefault({ image, title, description, link, date }) {
     return (
 
 
-        <div className="post" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
+        <div className="post m-4" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
             <div className="header_post">
                 <img src={image} alt={title} />
             </div>
